@@ -1,0 +1,33 @@
+.login-form-container {
+  width: 500px;
+  height: 280px;
+  background-color: white;
+  border-radius: 1% 1% 1% 1%;
+}
+
+.login-form-header {
+  height: 25%;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 0px 20px;
+  gap: 10px;
+}
+
+.login-form-control {
+  height: 75%;
+  padding: 20px;
+}
+
+.footer {
+  position: relative;
+  padding-top: 20px;
+}
+
+.error {
+  position: absolute;
+  top: -8px;
+  left: 110px;
+  color: red;
+  font-weight: 500;
+}

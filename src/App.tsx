@@ -1,26 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Header } from "./components/Header";
+import { useEffect } from "react";
+import "./App.css";
 
 function App() {
+  //...render
+  // calling API
+  // array dependencies
+
+  let x = 1;
+
+  useEffect(() => {
+    fetch('https://jsonplaceholder.typicode.com/posts')
+  }, [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <Header />
+      <div className="app-content">
+        <h1>App</h1>
+      </div>
     </div>
   );
 }
 
 export default App;
+
+/**
+ * where to call API (API call is asynchronous code )
+ * 1. inside component
+ * 2. tools: redux-saga, redux-toolkit, react-query
+ * Component: pure function
+ * Side effect
+ */
