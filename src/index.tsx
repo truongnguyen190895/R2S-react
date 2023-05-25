@@ -9,6 +9,9 @@ import { Layout } from "./components/Layout";
 import Major from "./screens/Major";
 import ProductDetail from "./screens/Product/ProductDetail";
 import LoginPage from "./screens/Login";
+import NotFound from "./screens/NotFound";
+import store from "./store";
+import { Provider } from "react-redux";
 
 //nested route
 
@@ -40,6 +43,10 @@ const router = createBrowserRouter([
     path: "/login",
     element: <LoginPage />,
   },
+  {
+    path: "/not-found",
+    element: <NotFound />,
+  },
 ]);
 
 const root = ReactDOM.createRoot(
@@ -47,7 +54,9 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <Provider store={store}>
+      <RouterProvider router={router} />
+    </Provider>
   </React.StrictMode>
 );
 

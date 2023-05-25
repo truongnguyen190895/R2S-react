@@ -3,11 +3,6 @@ import { useEffect } from "react";
 import "./App.css";
 
 function App() {
-  //...render
-  // calling API
-  // array dependencies
-
-  let x = 1;
 
   useEffect(() => {
     fetch('https://jsonplaceholder.typicode.com/posts')
