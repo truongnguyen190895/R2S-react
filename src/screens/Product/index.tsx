@@ -1,11 +1,12 @@
 import { useNavigate } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
+
 import { Actions } from "../../store/actions";
+import { useAppSelector, useAppDispatch } from "../../hooks/useRedux";
 
 const Product = () => {
   const navigate = useNavigate();
-  const authData = useSelector((state) => (state as any).auth);
-  const dispatch = useDispatch();
+  const authData = useAppSelector((state) => state.auth);
+  const dispatch = useAppDispatch();
 
   console.log("authData ", authData);
 
